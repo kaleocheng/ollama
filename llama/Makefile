@@ -15,7 +15,7 @@ else ifeq ($(OS),linux)
 	HIP_LIB_DIR := $(shell ls -d $(HIP_PATH)/lib 2>/dev/null)
 	CUDA_PATH?=/usr/local/cuda
 	CUDA_11:=$(shell ls -d $(CUDA_PATH)-11 2>/dev/null)
-	CUDA_12:=$(shell ls -d $(CUDA_PATH)-12 2>/dev/null)
+	CUDA_12:=$(shell ls -d $(CUDA_PATH) 2>/dev/null)
 endif
 
 ifeq ($(OLLAMA_SKIP_CUDA_GENERATE),)
